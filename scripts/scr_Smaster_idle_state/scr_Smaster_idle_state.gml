@@ -1,0 +1,1 @@
+scr_Smaster_check_player();
