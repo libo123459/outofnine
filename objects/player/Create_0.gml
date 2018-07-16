@@ -5,16 +5,16 @@ knockback = false
 kb_x = 0;
 kb_y = 0;
 
-spd = 1;
+spd = 1.1;
 hspd = 0;
 vspd = 0;
 len = 0;
 dir = 0;
 dash_time = room_speed / 5;
 face = 0
-hp_max = 9;
+hp_max = 18;
 
-hp = global.hp+global._hp;
+hp = global.hp + global._hp;
 if(hp >= hp_max)
 {
 	hp = hp_max
@@ -33,10 +33,6 @@ state = scr_move_state;
 bullet_cooldown = room_speed/2;
 bullet_filltime = room_speed;
 
-//energy = 4;
-
-
-
 alarm[0] = 0;
 alarm[1]=0
 
@@ -44,4 +40,4 @@ alarm[1]=0
 
 arrived_room = 0;
 
-//obj_fillBullet.image_speed = 0;
+

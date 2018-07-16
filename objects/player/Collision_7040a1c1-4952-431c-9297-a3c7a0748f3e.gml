@@ -5,6 +5,6 @@ if(other.exit_open == true)
 	instance_destroy(other)
 	scr_room_clear();
 	room_goto(roomMakeMaze)
-	global.hp = 5;
+	global.hp = 9;
 	instance_destroy(self)
 }

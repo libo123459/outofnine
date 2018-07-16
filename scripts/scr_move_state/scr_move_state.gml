@@ -44,7 +44,7 @@ if(aim_key)
 				sprite_index = ting_up;
 			}	
 			image_speed = 1;
-			image_xscale = flipped;			
+			image_xscale = flipped;	
 		}	
 	}
 			hspd = lengthdir_x(len,dir);
@@ -61,4 +61,5 @@ if(aim_key)
 			}
 			x += hspd + kb_x;
 			y += vspd + kb_y;
+			
 }
