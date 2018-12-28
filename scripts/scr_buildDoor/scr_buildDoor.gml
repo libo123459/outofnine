@@ -10,7 +10,7 @@ switch(argument1)
 	{
 		argument0.up = 1;
 		//instance_create_layer(argument0.x,argument0.y-n,"Instances",obj_door);		
-		roomUp = GetRoom(argument0.num -3);		
+		roomUp = GetRoom(argument0.index -3);		
 		roomUp.down = 1;
 		//instance_create_layer(roomUp.x,roomUp.y + n,"Instances",obj_door);
 		
@@ -23,7 +23,7 @@ switch(argument1)
 		argument0.down = 1;
 		//instance_create_layer(argument0.x,argument0.y+n,"Instances",obj_door);
 		
-		roomDown = GetRoom(argument0.num +3);		
+		roomDown = GetRoom(argument0.index +3);		
 		roomDown.up = 1;
 		//instance_create_layer(roomDown.x,roomDown.y - n,"Instances",obj_door);
 		
@@ -35,7 +35,7 @@ switch(argument1)
 	{
 		argument0.left = 1;
 		//instance_create_layer(argument0.x-n,argument0.y,"Instances",obj_door);
-		roomRight = GetRoom(argument0.num - 1);		
+		roomRight = GetRoom(argument0.index - 1);		
 		roomRight.right = 1;
 		//instance_create_layer(roomRight.x + n,roomRight.y,"Instances",obj_door);
 		
@@ -47,7 +47,7 @@ switch(argument1)
 	{
 		argument0.right = 1;
 		//instance_create_layer(argument0.x+n,argument0.y,"Instances",obj_door);
-		roomLeft = GetRoom(argument0.num + 1);		
+		roomLeft = GetRoom(argument0.index + 1);		
 		roomLeft.left = 1;
 		//instance_create_layer(roomLeft.x - n,roomLeft.y,"Instances",obj_door);
 		

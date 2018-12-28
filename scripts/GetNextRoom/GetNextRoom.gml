@@ -7,18 +7,18 @@
 switch(argument1)
 {
 	case 8:
-	return GetRoom(argument0.num - 3);
+	return GetRoom(argument0.index - 3);
 	break;
 	
 	case 2:
-	return GetRoom(argument0.num + 3);
+	return GetRoom(argument0.index + 3);
 	break;
 	
 	case 4:
-	return GetRoom(argument0.num - 1);
+	return GetRoom(argument0.index - 1);
 	break;
 	
 	case 6:
-	return GetRoom(argument0.num + 1);
+	return GetRoom(argument0.index + 1);
 	break;
 }
