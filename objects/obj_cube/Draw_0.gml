@@ -4,6 +4,7 @@ draw_self();
 draw_set_font(global.fz)
 draw_text_transformed(x-10,y-10,points,0.5,0.5,0);
 
+/*
 var colors_string = "";
 switch(colors)
 {

@@ -1,10 +1,10 @@
 var supple = 0;
-
+var cardmax = 4;
 if(ds_list_size(global.decklist)>0)//如果卡组里有剩余
 {	
-	if(ds_list_size(global.cardlist)<3)
+	if(ds_list_size(global.cardlist)<cardmax)
 	{	
-		supple = 3-ds_list_size(global.cardlist) //需要补充的牌
+		supple = cardmax-ds_list_size(global.cardlist) //需要补充的牌
 		if(supple > ds_list_size(global.decklist) ) //检查卡组剩余是否够supple
 		{
 			supple = ds_list_size(global.decklist)

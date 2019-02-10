@@ -5,11 +5,14 @@ draw_self();
 
 draw_set_font(global.fz)
 draw_text_transformed(x-10,y-10,points,.5,.5,0);
-var colors_string = "";
+image_index = colors;
+//draw_text_transformed(x-5,y,colors_string,0.5,0.5,0);
+
+/*var colors_string = "";
 switch(colors)
 {
 	case 1:
-	colors_string = "红桃";
+	image_index = colors;
 	break;
 	
 	case 2:
@@ -24,4 +27,3 @@ switch(colors)
 	colors_string = "梅花";
 	break;
 }
-draw_text_transformed(x-5,y,colors_string,0.5,0.5,0);

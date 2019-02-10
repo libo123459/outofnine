@@ -49,7 +49,7 @@ for(i = 1;i <= 3;i+=1)//抽出的9张
 		temp.b = i - 1;
 		temp.colors = ds_map_find_value(ds_list_find_value(global.Enemy_cardlist,temp.index-1),"colors");	
 		temp.points = ds_map_find_value(ds_list_find_value(global.Enemy_cardlist,temp.index-1),"points");
-		temp.sprite_index = spr_cube;
+		temp.sprite_index = asset_get_index("spr_cube" + string(temp.colors));
 		scr_initDir(temp);
 		global.cubelist[j-1 + 3*(i-1)] = temp;	
 		

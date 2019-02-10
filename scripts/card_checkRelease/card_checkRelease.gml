@@ -1,5 +1,5 @@
 var temp = collision_rectangle(mouse_x-12,mouse_y-12,mouse_x +12,mouse_y + 12,obj_cube,false,false);
-if(temp != noone)
+if(temp != noone && temp.card = noone)
 {	
 	//temp.actived = true;
 	temp.card = self;
