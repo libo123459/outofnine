@@ -20,7 +20,7 @@
         "0e9f196d-9da0-4394-a11b-27f00f3d42b9"
     ],
     "filterType": "GMScript",
-    "folderName": "room",
+    "folderName": "room_old",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

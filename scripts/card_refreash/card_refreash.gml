@@ -1,4 +1,4 @@
-var supple = 0;
+/*var supple = 0;
 var cardmax = 4;
 if(ds_list_size(global.decklist)>0)//如果卡组里有剩余
 {	

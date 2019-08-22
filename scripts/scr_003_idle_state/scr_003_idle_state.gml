@@ -1,0 +1,1 @@
+scr_003_check_player()

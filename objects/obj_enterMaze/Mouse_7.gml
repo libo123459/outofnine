@@ -1,3 +1,4 @@
 /// @description Insert description here
 // You can write your code in this editor
-scr_enterMaze();
+room_goto(room1)
+//scr_enterMaze();

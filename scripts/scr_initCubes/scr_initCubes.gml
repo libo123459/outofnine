@@ -1,4 +1,5 @@
 //instance_create_layer(160,90,"Instances",obj_borad);
+/*
 global.Enemy_decklist = ds_list_create();
 global.Enemy_cardlist = ds_list_create();
 for(i = 1;i<=4;i+=1) //非joker的52张牌

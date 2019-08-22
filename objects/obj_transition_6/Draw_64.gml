@@ -1,6 +1,6 @@
 if (currentframe > 1) 
 {	
-	var slideamount = EaseOutQuad(currentframe,0,1280,40);
+	var slideamount = EaseOutQuad(currentframe,0,1280,25);
 	
     // convert the number of frames that have passed into a number between 0 and the room width
     

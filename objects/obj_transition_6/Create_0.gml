@@ -2,7 +2,7 @@
 // You can write your code in this editor
 //display_set_gui_size(320,256);
 currentframe = 0
-maxframes = 45
+maxframes = 25
 toward = 0;
 persistent = true; // when changing room keep this object alive
 

@@ -17,7 +17,7 @@ if(knockback = true)
 } else {
 	draw_self();
 }
-
+/*
 if(red_hp = 0)
 {
 	for(i=1;i<=hp;i+=1)	

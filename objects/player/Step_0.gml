@@ -3,18 +3,10 @@
 script_execute(state);
 depth = -y;
 
-if(energy_remain = 0)
+if(aim_key)
 {
-	if(!instance_exists(obj_energy_needsup))
+	if(ds_list_size(global.card_using_list)<4 && ds_list_size(global.card_list)>0)//如果卡组里有剩余
 	{
-		instance_create_layer(x,y,"Instances",obj_energy_needsup);
-	}	
-}
-if(fill_key)
-{
-	if(energy_remain=0 && hp>0)
-	{
-		hp-=1;
-		energy_remain = 4;
+		scr_deck_draw();
 	}
 }

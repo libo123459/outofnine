@@ -5,16 +5,6 @@
     "name": "obj_skeleton",
     "eventList": [
         {
-            "id": "4c866d25-fc8f-45ab-bdc5-de827a18ef3e",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "fd921f95-93ba-4782-8a64-883e690588e2",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "a502bda8-f658-4c27-9d4a-5ad47b5316a3"
-        },
-        {
             "id": "0f1128d1-0981-48df-859b-0b835d06b46c",
             "modelName": "GMEvent",
             "mvc": "1.0",

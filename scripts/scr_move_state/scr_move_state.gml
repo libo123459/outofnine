@@ -1,65 +1,97 @@
 scr_getinput();
-var flipped = (mouse_x > x)*2 - 1;
-var flipped_y = (mouse_y > x)*2 - 1;
 
-if(aim_key)
-{	
-	if (energy_remain >0)
-	{	
-		state = scr_aim_state;					
-	}
+var xaxis = (right_key - left_key);
+var yaxis = (down_key - up_key);
 
-}else{	
-	if(xaxis == 0 and yaxis == 0)
-	{
-		len = 0;
-		if(mouse_y >= y)
-		{
-			sprite_index = ting_idle;
-		} else {
-			sprite_index = ting_idle_up;
-		}
-		image_speed = 0.8;
-		image_xscale = flipped;
-		
-	} else {	
-		if(dash_key)
-		{
-			image_index = 0;
-			if(xaxis != 0)
-			{
-				image_xscale = xaxis;
-			} else {
-				image_xscale = image_xscale;
-			}	
-			
-			state = scr_dash_state;	
-		} else {
-			dir = point_direction(0,0,xaxis,yaxis);
-			len = spd;
-			if(mouse_y >= y)
-			{
-				sprite_index = ting;
-			} else {
-				sprite_index = ting_up;
-			}	
-			image_speed = 1;
-			image_xscale = flipped;	
-		}	
-	}
-			hspd = lengthdir_x(len,dir);
-			vspd = lengthdir_y(len,dir);
-			if(place_meeting(x + hspd + kb_x,y,obj_wall))
-			{
-				hspd = 0;
-				kb_x = 0;
-			}
-			if(place_meeting(x,y + vspd + kb_y,obj_wall))
-			{
-				vspd = 0;
-				kb_y = 0;
-			}
-			x += hspd + kb_x;
-			y += vspd + kb_y;
-			
+if(fire_key)
+{
+	image_index = 0;
+	flipped_x = (mouse_x > x)*2 - 1;
+	flipped_y = (mouse_y > y)*2 - 1;
+	fire_dir = point_direction(x,y,mouse_x,mouse_y);
+	state = scr_fire_state;
 }
+
+if(xaxis == 0 and yaxis == 0)
+{
+	readyrun = false;
+	len = 0;
+	if(flipped_ud = -1)
+	{
+		sprite_index = spr_player_idle;
+	} else {
+		sprite_index = spr_player_idleup;
+	}
+
+	
+	image_speed = 0.5;
+	image_xscale = image_xscale;
+	
+		
+} else {	
+	if(dash_key)
+	{
+		image_index = 0;
+		if(xaxis != 0)
+		{
+			image_xscale = xaxis;
+		} else {
+			image_xscale = image_xscale;
+		}	
+			
+		state = scr_dash_state;	
+	} else {
+			
+		dir = point_direction(0,0,xaxis,yaxis);
+		if(xaxis = 0)
+		{
+			flipped = flipped;
+		} else {
+			flipped = -xaxis;
+		}
+		if(yaxis = 0)
+		{
+			flipped_ud = -1;
+		} else {
+			flipped_ud = -yaxis;
+		}
+		if(flipped_ud = -1)
+		{
+			if(readyrun = false)
+			{
+				sprite_index = spr_player_readyrun;
+				len = spd*.91;
+				image_speed = 1;
+			} else {
+				sprite_index = spr_player_run_left
+				len = spd*1.2;
+				image_speed = 1.3;
+			}
+		} else {
+			
+				sprite_index = spr_player_run_leftup
+				len = spd*1.2;
+				image_speed = 1.3;
+			
+		}
+		
+		image_xscale = flipped;			
+	}	
+}
+			
+hspd = lengthdir_x(len,dir);
+vspd = lengthdir_y(len,dir);
+if(place_meeting(x + hspd + kb_x,y,obj_wall))
+{
+	hspd = 0;
+	kb_x = 0;
+}
+if(place_meeting(x,y + vspd + kb_y,obj_wall))
+{
+	vspd = 0;
+	kb_y = 0;
+}
+x += hspd + kb_x;
+y += vspd + kb_y;
+	
+
