@@ -10,3 +10,6 @@ targetX = player.x
 targetY = player.y;
 var flipped = (targetX > x)*2 - 1;
 image_xscale = -flipped
+colors = 2
+points = 0
+type = 1;

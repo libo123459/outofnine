@@ -20,6 +20,7 @@ if(state = scr_003_readyattack_state)
 	
 	var flipped = (targetX > x)*2 - 1;
 	image_xscale = -flipped
-	image_speed = 2;
+	
 	state = scr_003_attack_state;
+	attacked = true
 }

@@ -1,8 +1,6 @@
 scr_getinput();
-sprite_index = spr_ting_roll;
-image_speed = 1;
-
-len = spd * 1.5;
+//global.i_speed = 0;
+len = spd * 2.5;
 hspd = lengthdir_x(len,dir);
 vspd = lengthdir_y(len,dir);
 if(place_meeting(x + hspd,y,obj_wall))

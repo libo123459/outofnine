@@ -1,5 +1,5 @@
 sprite_index = spr_wizard
-image_speed = 0.8;
+image_speed = 0.8*global.i_speed;
 
 if(alarm[1]<=0)
 {

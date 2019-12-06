@@ -4,5 +4,5 @@ image_speed = 0;
 depth = 10
 target_room = noone;
 dir = noone;
-isopen = true;
+isopen = false;
 colors = 0;

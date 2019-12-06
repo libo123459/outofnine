@@ -5,4 +5,4 @@ var csv = load_csv("test.csv");
 
 var hh = ds_grid_height(csv);
 var value = ds_grid_get(csv,0,0);
-show_debug_message("value is"+value)
+

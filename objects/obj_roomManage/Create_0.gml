@@ -31,3 +31,4 @@ global.room_current_index = 1;
 scr_room_creat();
 
 room_goto(ds_list_find_value(global.Room_list,0))
+//obj_enemyManage.roomupdate = true;

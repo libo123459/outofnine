@@ -1,6 +1,6 @@
 
 sprite_index = spr_003_idle_4
-image_speed = 1.4;
+image_speed = 1.4*global.i_speed;
 
 if(alarm[1]<=0)
 {

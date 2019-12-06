@@ -1,11 +1,9 @@
 if(instance_exists(player))
 {
-	var dis = point_distance(x,y,player.x,player.y);
+	
 	var xdis = abs(x-player.x)
 	var ydis = abs(y-player.y)
-	if(dis < sight)
-	{
-		if(xdis <=50 && ydis <= 10)
+	if(xdis <=50 && ydis <= 10)
 		{
 			targetX = player.x;
 			targetY = player.y;
@@ -16,7 +14,7 @@ if(instance_exists(player))
 			
 		} else{
 			sprite_index = spr_003_run_4;
-			image_speed = 1.7;			
+			image_speed = 1.7*global.i_speed;			
 			if(x > player.x)
 			{
 				targetX = player.x + 10
@@ -29,9 +27,4 @@ if(instance_exists(player))
 			state = scr_003_chase_state;
 		}
 		
-	} else {
-		scr_003_choose_state();
 	}
-} else {
-	scr_003_choose_state();
-}

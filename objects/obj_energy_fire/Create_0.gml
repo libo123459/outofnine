@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-image_speed = 1.5;
+image_speed = 1.5*global.i_speed;
 
 
 direction = point_direction(player.x,player.y,mouse_x,mouse_y);

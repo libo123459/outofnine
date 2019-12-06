@@ -11,7 +11,7 @@ vspd = lengthdir_y(len,direction);
 xStart = x;
 yStart = y;
 image_angle = direction;
-reflex = false;//反弹状态
+echo = false;//加持状态
 
 atk = 1;
 colors = 0;

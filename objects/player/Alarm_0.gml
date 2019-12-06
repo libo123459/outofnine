@@ -1,3 +1,4 @@
-/// @description Insert description here
+/// @description dash time
 // You can write your code in this editor
-fired =false;
+state = scr_move_state
+//global.i_speed = 1;

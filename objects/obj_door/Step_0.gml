@@ -3,7 +3,7 @@
 
 if(instance_number(obj_enemy) == 0)
 {	
-	sprite_index = spr_thedoor_open;
-	image_index = colors;
-	isopen = false;
+	///sprite_index = spr_thedoor_open;
+	image_index = 1;
+	isopen = true;
 }

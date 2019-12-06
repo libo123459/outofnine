@@ -1,5 +1,6 @@
 global.card_list = ds_list_create();//原卡组
 global.card_using_list = ds_list_create();//正在用的卡组（正在用的子弹）
+global.card_used_list = ds_list_create();//弃卡堆
 for(i = 1;i<=4;i+=1) //非joker的52张牌
 {
 	for(j = 1;j<=13;j+=1)
