@@ -1,4 +1,4 @@
-sprite_index = spr_002_attack_2;
+sprite_index = asset_get_index("spr_002_attack_"+string(colors));
 image_speed = 1*global.i_speed;
 if(place_meeting(x,y,player))
 {
@@ -8,12 +8,7 @@ if(place_meeting(x,y,player))
 		{
 			global.i_speed = 0.2;
 		} else {
-			var kb_dir = point_direction(x,y,player.x,player.y);	
-			player.kb_x = lengthdir_x(3, kb_dir);
-			player.kb_y = lengthdir_y(3, kb_dir);
-			player.knockback = true;
-			player.alarm[2] = room_speed/6;
-			player.hp -= 1;
+			scr_player_hurt(self)
 		}	
 		attacked = false;
 	}

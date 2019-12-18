@@ -8,12 +8,7 @@ if(instance_exists(obj_005_LongArm))
 		{
 			global.i_speed = 0.2;
 		} else {
-			var kb_dir = point_direction(obj_005_LongArm.x,obj_005_LongArm.y,player.x,player.y);	
-			player.kb_x = lengthdir_x(3, kb_dir);
-			player.kb_y = lengthdir_y(3, kb_dir);
-			player.knockback = true;
-			player.alarm[2] = room_speed/6;
-			player.hp -= 1;
+			scr_player_hurt(self)
 		}
 		attacked = false;
 	}

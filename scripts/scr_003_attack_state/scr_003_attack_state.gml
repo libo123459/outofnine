@@ -6,16 +6,11 @@ if(place_meeting(x,y,player))
 		if(player.sTime = true)
 		{
 			global.i_speed = 0.2;
-		} else {
-			var kb_dir = point_direction(x,y,player.x,player.y);	
-			player.kb_x = lengthdir_x(3, kb_dir);
-			player.kb_y = lengthdir_y(3, kb_dir);
-			player.knockback = true;
-			player.alarm[2] = room_speed/6;
-			player.hp -= 1;
+		} else {			
+			scr_player_hurt(self)
 		}	
 		attacked = false;
-	}
+	}	
 }
 
 var dir = point_direction(x,y,targetX,targetY);

@@ -1,5 +1,5 @@
 scr_getinput();
-//global.i_speed = 0;
+
 len = spd * 2.5;
 hspd = lengthdir_x(len,dir);
 vspd = lengthdir_y(len,dir);

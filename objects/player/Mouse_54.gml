@@ -1,6 +1,24 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+if(fired = false)
+{	
+	scr_card_exchange();
+	/*
+	if(obj_card_vice.colors = 2)
+	{
+		ex_atk = 1;
+	}else{
+		ex_atk = 0;
+	}
+	if(obj_card_vice.colors = 2)
+	{
+		ex_atk = 1;
+	}else{
+		ex_atk = 0;
+	}*/
+	
+}
+/*
 if(energy >0)
 {
 	if(obj_cardManage.remain > 0)
@@ -12,11 +30,3 @@ if(energy >0)
 	}
 }
 /*
-if(global.card_using_list < 4)
-{
-	if(obj_cardManage.remain > 0)
-	{
-		scr_deck_draw();
-		atk += 1
-	}	
-}

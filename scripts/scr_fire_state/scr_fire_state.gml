@@ -14,16 +14,16 @@ if(image_index>=3 && image_index <=4)
 	{		
 		var bullet = instance_create_layer(x,y,"Instances",obj_bullet);
 		//bullet.colors = card_colors;
-		bullet.points = card_points;
+		bullet.points = points;
 		bullet.type = type
-		bullet.atk = atk;
-		if(echo_atk > 0)
-		{
-			bullet.echo = true;
-		}
+		bullet.atk = atk+ex_atk;
+		bullet.image_index = type-1;
+		bullet.image_speed = 0;
 		//alarm[0] = bullet_cooldown;//子弹间隔		
-		fired = true;
+	
 		//atk = 1;
-		var gunfire = instance_create_layer(x,y,"Instances",obj_gunfire);	
+		var gunfire = instance_create_layer(x,y,"Instances",obj_gunfire);
+		obj_card_using.image_index = 0;
+		fired = true;
 	}
 }

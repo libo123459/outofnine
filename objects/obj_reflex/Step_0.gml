@@ -2,10 +2,7 @@
 // You can write your code in this editor
 if(!place_meeting(x+hspd,y,obj_energywall)||!place_meeting(x,y+vspd,obj_energywall))
 {
-	hspd = lengthdir_x(len,direction);
-	vspd = lengthdir_y(len,direction);
-	x += hspd;
-	y += vspd;
+	
 }
 if(place_meeting(x+hspd,y,obj_energywall))
 {	
@@ -28,7 +25,7 @@ if(place_meeting(x+hspd,y,obj_energywall))
 		//atk += 1;
 	}else{
 		scr_card_toUsed();//用过的放入弃牌
-		scr_player_atk_refresh();	
+		player.fired = false;	
 		scr_deck_draw();//抽卡自动填子弹		
 		instance_destroy(self)		
 	}	
@@ -54,7 +51,7 @@ if(place_meeting(x,y+vspd,obj_energywall))
 		//atk += 1;
 	}else{
 		scr_card_toUsed();//用过的放入弃牌
-		scr_player_atk_refresh();
+		player.fired = false;
 		scr_deck_draw();//抽卡自动填子弹
 
 		instance_destroy(self)				
@@ -74,16 +71,24 @@ if(place_meeting(x,y,player))
 	player.atk += player.echo_atk;*/
 	player.type = 3
 	player.fired = false;
-	player.energy += 1;
-	if(player.energy >=4)
-	{
-		player.energy = 4;
-	}
+	obj_card_using.colors = 5;
+	obj_card_using.image_index = 5;
+	obj_card_using.type = 3;
+	//player.energy += 1;
+	//if(player.energy >=4)
+	//{
+	//	player.energy = 4;
+	//}
+	/*
 	for(var i =0;i<ds_list_size(global.card_using_list);i+=1)
 	{
 		var _tmp = ds_list_find_value(global.card_using_list,i);
 		_tmp.colors = 5;
 		_tmp.image_index = 5;
-	}	
+	}	*/
 	instance_destroy(self)	
 }
+hspd = lengthdir_x(len,direction);
+	vspd = lengthdir_y(len,direction);
+	x += hspd;
+	y += vspd;

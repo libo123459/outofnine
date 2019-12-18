@@ -1,5 +1,5 @@
 	var room_tmp = scr_room_choose();
-	var dir = scr_room_dir(room_tmp);//扩展方向
+	var dir      = scr_room_dir(room_tmp);//扩展方向
 	randomize();
 	switch(dir)
 	{

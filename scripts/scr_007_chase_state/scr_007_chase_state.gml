@@ -1,4 +1,4 @@
-sprite_index = spr_007_walk_2;
+sprite_index = asset_get_index("spr_007_walk_"+string(colors));
 image_speed = 1.3 * global.i_speed;
 var dir = point_direction(x,y,targetX,targetY);
 

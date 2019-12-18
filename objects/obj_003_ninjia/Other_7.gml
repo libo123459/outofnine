@@ -13,9 +13,9 @@ if(state = scr_003_readyattack_state)
 	targetY = player.y;
 	if(targetY-y>0)
 	{
-		sprite_index = spr_003_attack_4;
+		sprite_index = asset_get_index("spr_003_attack_"+string(colors));;
 	} else {
-		sprite_index = spr_003_attackup_4;
+		sprite_index = asset_get_index("spr_003_attackup_"+string(colors));;
 	}
 	
 	var flipped = (targetX > x)*2 - 1;

@@ -12,6 +12,18 @@ if(knockback = true)
 } else {
 	draw_self();
 }
-draw_text_transformed_color(x-15,y-25,atk,0.5,0.5,0,c_black,c_black,c_black,c_black,1)
+//draw_text_transformed_color(x-15,y-25,atk,0.5,0.5,0,c_black,c_black,c_black,c_black,1)
 
-draw_text_transformed_color(x-15,y+25,energy,0.5,0.5,0,c_black,c_black,c_black,c_black,1)
+//draw_text_transformed_color(x-15,y-25,energy,0.5,0.5,0,c_black,c_black,c_black,c_black,1)
+/*if(obj_card_using.points>=global.date_num)
+{
+	draw_sprite(spr_player_points_tip,obj_card_using.colors,x-18,y-20)
+} else {
+	draw_sprite(spr_player_points_tip,0,x-18,y-20)
+}*/
+if(obj_card_vice.points >= global.date_num)
+{
+	draw_sprite(spr_player_points_tip,obj_card_vice.colors,x-18,y-5)
+} else {
+	draw_sprite(spr_player_points_tip,0,x-18,y-5)
+}

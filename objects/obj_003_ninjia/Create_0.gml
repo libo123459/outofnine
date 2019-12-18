@@ -5,6 +5,3 @@ event_inherited()
 state = scr_003_idle_state;
 speed_ = 1; //速度系数
 attacked = false;
-colors = 4
-points = 0
-type = 2;

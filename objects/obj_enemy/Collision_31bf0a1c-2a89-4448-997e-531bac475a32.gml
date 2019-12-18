@@ -2,28 +2,30 @@
 // You can write your code in this editor
 if(other.type = type || other.type = 3)
 {	
-	if(hp>other.atk)
-	{	
-		hp -= other.atk;
-	} else {			
+	/*if(points <= obj_card_using.points)
+	{
+		scr_card_using_trigger()	
+		show_debug_message("Main card trigger!!!")
+	}*/
+	if(points <= obj_card_vice.points)
+	{
+		scr_card_vice_trigger()	
+		show_debug_message("Vice card trigger!!!")
+	}
+	
+	hp -= other.atk
+	if(hp <=0)
+	{
 		instance_create_layer(x,y,"Instances",obj_bleed_w);		
 		instance_destroy(self);
-	//scr_room_checkDone();
-	}
-	if(points <= other.points)
-	{
-		if(player.energy < 4)
-		{
-			player.energy += 1
-		}	
-	}
+	}	
 	knockback = true;
 	alarm[2] = 10
-	instance_create_layer(0,0,"Instances",obj_shake)
+	instance_create_layer(0,0,"Instances",obj_shake)	
 }
 
 scr_card_toUsed();//用过的放入弃牌
-scr_player_atk_refresh();
+player.fired = false;
 scr_deck_draw();//抽卡自动填子弹
 instance_destroy(other);
 

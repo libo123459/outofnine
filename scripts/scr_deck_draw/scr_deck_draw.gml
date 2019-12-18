@@ -5,73 +5,20 @@
 	var _colors = ds_map_find_value(_cardIndeck,"colors")//花色
 	var _points = ds_map_find_value(_cardIndeck,"points")
 	//表现层
-	var xpos = ds_list_size(global.card_using_list)*25 + 50;	
-	var card = instance_create_depth(xpos,room_height-23,-10001,obj_card_using);
-	card.sprite_index = spr_card;
-	card.image_index = _colors;
+	//var xpos = ds_list_size(global.card_using_list)*25 + 50;	
+	//var card = instance_create_depth(50,room_height-30,-10001,obj_card_using);
+	//card.sprite_index = spr_card;
+	obj_card_using.image_index = _colors;
 	//赋予抽出卡牌属性
-	card.colors = _colors;
-	card.points = _points;
-	switch(card.colors)
-	{
-		case 1:
-		card.type = 1;
-		break;
-		
-		case 2:
-		card.type = 1;
-		break;
-		
-		case 3:
-		card.type = 2;
-		break;
-		
-		case 4:
-		card.type = 2;
-		break;
-	}
+	obj_card_using.colors = _colors;
+	obj_card_using.points = _points;
+	scr_card_type_get(obj_card_using)
 	
-	player.card_points = player.card_points + card.points;
-	ds_list_add(card.colors,player.card_colors);
-	if(player.type = 0)
-	{
-		player.type = card.type
-	}/* else {
-		if(player.type != card.type)
-		{
-			player.type = 3;
-		}else{
-			player.type = card.type;
-		}
-	}*/
-	ds_list_add(global.card_using_list,card);
-	/*if(ds_list_size(global.card_using_list)>1)
-	{
-		player.ex_atk = ds_list_size(global.card_using_list)-1;
-	}
-	player.atk = 1+player.ex_atk;*/
+	player.points = _points;
+	player.colors = _points;
+	player.type = obj_card_using.type	
+
 	ds_list_delete(global.card_list,index);//最后从原卡组中删除抽调的牌
 	obj_cardManage.remain = ds_list_size(global.card_list);
-	
-	/*var _card = ds_map_create();//抽到的卡
-	ds_map_set(_card,"colors",_colors)
-	ds_map_set(_card,"points",_points)*/
-	
-	/*
-	switch(player.type)
-	{
-		case 1:
-		show_debug_message("Red");
-		break;
-		
-		case 2:
-		show_debug_message("Black");
-		break;
-		
-		case 3:
-		show_debug_message("No Color")
-		break;
-	}
-
 	
 	

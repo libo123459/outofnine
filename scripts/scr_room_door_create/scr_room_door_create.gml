@@ -48,4 +48,3 @@ _floor.colors = argument0.colors;
 _floor.image_index = _floor.colors;
 _floor.depth = 200 */
 
-argument0.arrived = true;

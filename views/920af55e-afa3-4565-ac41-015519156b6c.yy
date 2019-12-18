@@ -14,9 +14,10 @@
         "511f6540-7872-4ff5-84d1-fd468714d8b4",
         "5c5ce4b7-c7e6-4e90-9ef0-f4e4f6e137f3",
         "dcd8b273-1803-4e3e-9b28-9602e1350173",
-        "f9b78e77-91fe-473b-93fd-7e3ed62ebbd7",
         "83d2c65d-1400-47d6-9526-8902ec998d31",
-        "1ea27439-0c6f-44eb-bcc2-5a888f131c89"
+        "f9b78e77-91fe-473b-93fd-7e3ed62ebbd7",
+        "1ea27439-0c6f-44eb-bcc2-5a888f131c89",
+        "d610c34c-e39f-4e0a-9387-1babbbbd0bf5"
     ],
     "filterType": "GMSprite",
     "folderName": "005-LongArm",

@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(sprite_index = spr_002_disappear_2)
+if(sprite_index = asset_get_index("spr_002_disappear_"+string(colors)))
 {		
 	state = scr_002_attack_state;
 		
@@ -13,7 +13,7 @@ if(sprite_index = spr_002_disappear_2)
 	attacked = true;
 }
 
-if(sprite_index = spr_002_attack_2)
+if(sprite_index = asset_get_index("spr_002_attack_"+string(colors)))
 {
 	state = scr_002_appear_state;
 	
@@ -23,7 +23,7 @@ if(sprite_index = spr_002_attack_2)
 	var flipped = (targetX > x)*2 - 1;
 	image_xscale = -flipped
 }
-if(sprite_index = spr_002_appear_2)
+if(sprite_index = asset_get_index("spr_002_appear_"+string(colors)))
 {
 	state = scr_002_idle_state;
 	

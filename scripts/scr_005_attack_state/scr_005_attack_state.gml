@@ -1,4 +1,4 @@
-sprite_index = spr_005_attack_4;
+sprite_index = asset_get_index("spr_005_attack_"+string(colors));
 image_speed = .9*global.i_speed;
 var flipped = (targetX > x)*2 - 1;
 image_xscale = -flipped

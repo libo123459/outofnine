@@ -3,7 +3,7 @@
 //hspd = 0;
 //vspd = 0;
 
-spd = 8;
+spd = 17;
 len = spd;			
 //direction = spr_gun.direction;
 hspd = 0;

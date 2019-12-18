@@ -24,11 +24,11 @@ room_ori.index = room_num;
 
 randomize();
 room_ori.colors = irandom_range(1,4);
-
-scr_date_update(room_ori)
+room_ori.arrived = false;
+//scr_date_update(room_ori)
 
 global.room_current_index = 1;
 scr_room_creat();
 
-room_goto(ds_list_find_value(global.Room_list,0))
-//obj_enemyManage.roomupdate = true;
+//room_goto(ds_list_find_value(global.Room_list,0))
+obj_enemyManage.roomupdate = true;

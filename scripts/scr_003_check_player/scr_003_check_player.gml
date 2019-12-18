@@ -13,7 +13,7 @@ if(instance_exists(player))
 			//_zone.atk = atk
 			
 		} else{
-			sprite_index = spr_003_run_4;
+			sprite_index = asset_get_index("spr_003_run_"+string(colors));;
 			image_speed = 1.7*global.i_speed;			
 			if(x > player.x)
 			{

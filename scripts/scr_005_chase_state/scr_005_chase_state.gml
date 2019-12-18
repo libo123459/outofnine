@@ -1,5 +1,5 @@
 //scr_003_check_player();
-sprite_index = spr_005_run_4;
+sprite_index = asset_get_index("spr_005_run_"+string(colors));
 
 var dir = point_direction(x,y,targetX,targetY);
 

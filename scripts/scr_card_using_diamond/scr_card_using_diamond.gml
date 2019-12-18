@@ -1,0 +1,1 @@
+player.gold += 1;

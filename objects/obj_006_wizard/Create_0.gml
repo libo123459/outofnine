@@ -6,6 +6,3 @@ state = scr_006_idle_state;
 speed_ = 1; //速度系数
 attacked = false;
 alarm[3] = room_speed * 1.1;
-colors = 3;
-points = 0
-type = 2;

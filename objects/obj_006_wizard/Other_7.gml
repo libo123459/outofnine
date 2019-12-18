@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(sprite_index = spr_006_disappear_3)
+if(sprite_index = asset_get_index("spr_006_disappear_"+string(colors)))
 {		
 	
 	state = scr_006_appear_state;
@@ -12,14 +12,14 @@ if(sprite_index = spr_006_disappear_3)
 	image_xscale = -flipped	
 }
 
-if(sprite_index = spr_006_attack_3)
+if(sprite_index = asset_get_index("spr_006_attack_"+string(colors)))
 {
 	state = scr_006_idle_state;
 	
 	alarm[3] = room_speed
 	
 }
-if(sprite_index = spr_006_appear_3)
+if(sprite_index = asset_get_index("spr_006_appear_"+string(colors)))
 {	
 	state = scr_006_attack_state;		
 	targetX = player.x

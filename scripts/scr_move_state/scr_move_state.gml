@@ -26,7 +26,7 @@ if(xaxis == 0 and yaxis == 0)
 	image_xscale = image_xscale;	
 		
 } else {	
-	if(dash_key && energy > 0)
+	if(dash_key)
 	{
 		image_index = 0;
 		if(xaxis != 0)
@@ -38,7 +38,7 @@ if(xaxis == 0 and yaxis == 0)
 			
 		alarm[0] = 0.3*room_speed;
 		alarm[3] = 0.7*room_speed;
-		energy -= 1;
+
 		sTime = true;
 		state = scr_dash_state;	
 		
