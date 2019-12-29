@@ -1,1 +1,0 @@
-other.atk +=1

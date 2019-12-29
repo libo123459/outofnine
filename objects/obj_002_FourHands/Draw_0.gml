@@ -4,7 +4,7 @@
 event_inherited()
 if(sprite_index!=noone)
 {	
-	draw_sprite_ext(sprite_index,image_index,x,y+37,image_xscale,-0.6,0,c_black,image_alpha);
+	draw_sprite_ext(sprite_index,image_index,x,y+47,image_xscale,-0.6,0,c_black,image_alpha);
 }
 if(knockback = true)
 {

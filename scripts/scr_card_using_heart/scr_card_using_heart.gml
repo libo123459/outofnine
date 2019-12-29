@@ -1,4 +1,4 @@
-if(ds_list_size(global.card_used_list)>3)
+if(ds_list_size(global.card_used_list)>0)
 {
 	randomize()
 	var _max = ds_list_size(global.card_used_list)-1

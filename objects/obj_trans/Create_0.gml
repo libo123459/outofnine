@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-r_w = 1152;
-r_h = 1152
+r_w = room_width*4;
+r_h = room_height*4;
 currentframe = 0
 maxframes = 25
 toward = 0;

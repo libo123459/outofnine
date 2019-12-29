@@ -6,8 +6,8 @@ if(sprite_index = asset_get_index("spr_006_disappear_"+string(colors)))
 	state = scr_006_appear_state;
 	attacked = false;
 	targetX = player.x
-	x = irandom_range(40,277)
-	y = irandom_range(40,210)
+	x = irandom_range(66,room_width-66)
+	y = irandom_range(66,room_height-66)
 	var flipped = (targetX > x)*2 - 1;
 	image_xscale = -flipped	
 }

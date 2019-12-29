@@ -2,8 +2,8 @@
 //可扩展的方向
 randomize();
 
-var dir_list = ds_list_create();
-
+var dir_list = ds_list_create();//临时的方向列表
+///添加所有可扩展方向
 if(scr_room_get(argument0.xpos,argument0.ypos + 1) != 1)
 {
 	ds_list_add(dir_list,1);
@@ -23,7 +23,7 @@ if(scr_room_get(argument0.xpos - 1,argument0.ypos) != 1)
 
 var num = ds_list_size(dir_list)
 
-if(num!=0)
+if(num!=0)//随机选出一个方向扩展
 {
 	var dir = ds_list_find_value(dir_list,irandom_range(1,(num-1)))
 } else {

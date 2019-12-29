@@ -25,8 +25,8 @@ if(abs(targetX - x)<=2 && abs(targetY - y)<=2)
 
 	//state = choose(scr_005_chase_state,scr_005_attack_state);
 	image_index = 0;
-	targetX = irandom_range(50,260)
-	targetY = irandom_range(50,200)
+	targetX = irandom_range(66,room_width-66)
+	targetY = irandom_range(66,room_height-66)
 	
 }
 /*

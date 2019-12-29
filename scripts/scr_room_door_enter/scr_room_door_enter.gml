@@ -3,7 +3,7 @@ var yoffset = 100;
 var room_tmp = argument0.target_room;
 global.room_current_index = argument0.target_room.index;
 
-scr_date_update(room_tmp)
+
 switch(argument0.dir)//door的方向属性
 {
 	case "up":

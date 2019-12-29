@@ -9,7 +9,7 @@ if(argument0.arrived == false)
 	//var mon = instance_create_layer(xPos,yPOS,"Instances",obj_006_wizard)
 	var mon = instance_create_layer(xPos,yPOS,"Instances",choose(obj_003_ninjia,obj_005_LongArm,obj_006_wizard,obj_002_FourHands))
 	mon.points = global.date_num;
-	mon.colors = monster_style
+	mon.colors = argument0.colors;
 	
 	if(mon.colors = 1||mon.colors = 2)
 	{
@@ -17,7 +17,6 @@ if(argument0.arrived == false)
 	} else {
 		mon.type = 2;
 	}
-	show_debug_message(3423412435463456673)
 	//instance_create_layer(xPos,yPOS,"Instances",choose(obj_002_FourHands,obj_003_ninjia,obj_005_LongArm))
 	//instance_create_layer(xPos,yPOS,"Instances",scr_room_monster_style(monster_style))
 }

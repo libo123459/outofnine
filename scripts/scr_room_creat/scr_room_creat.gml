@@ -1,4 +1,4 @@
-	var room_tmp = scr_room_choose();
+	var room_tmp = scr_room_choose();//选出可扩展的房间
 	var dir      = scr_room_dir(room_tmp);//扩展方向
 	randomize();
 	switch(dir)
@@ -76,9 +76,12 @@
 		break;
 	}
 	room_num = ds_list_size(global.room_list)//房间总数没到一定数量时继续执行
-	if(room_num < 13)
+	if(room_num < 14)
 	{
 		scr_room_creat();
 	}
+	var _shop = ds_list_find_value(global.room_list,13)
+	_shop.colors = 0;
+	_shop.style = 1;
 
 	

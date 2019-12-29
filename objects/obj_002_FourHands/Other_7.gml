@@ -18,8 +18,8 @@ if(sprite_index = asset_get_index("spr_002_attack_"+string(colors)))
 	state = scr_002_appear_state;
 	
 	targetX = player.x
-	x = irandom_range(40,277)
-	y = irandom_range(40,210)
+	x = irandom_range(66,room_width-66) 
+	y = irandom_range(66,room_height-77)
 	var flipped = (targetX > x)*2 - 1;
 	image_xscale = -flipped
 }

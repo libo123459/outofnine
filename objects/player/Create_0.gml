@@ -3,6 +3,7 @@
 knockback = false
 kb_x = 0;
 kb_y = 0;
+
 //about move
 spd = 1.5;
 hspd = 0;
@@ -13,10 +14,12 @@ dash_time = room_speed/5;
 flipped = -1;
 flipped_ud = -1;
 readyrun = false;
+
 //about bullet
 fire_dir = 0;
 fired = false;//发射子弹的冷却判定
 sTime = false;
+
 //属性
 atk = 1;
 ex_atk = 0;
@@ -27,6 +30,10 @@ colors = 0;
 sheild = 0
 hp = 99;
 gold = 0;
+
+//other
+interact = false;
+target_select = noone;
 scr_getinput();
 state = scr_move_state;
 //display_set_gui_size(160,128);

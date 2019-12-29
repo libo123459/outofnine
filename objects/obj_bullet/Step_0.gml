@@ -20,16 +20,15 @@ if(place_meeting(x+hspd,y,obj_energywall))
 		b.image_index = 2;
 		b.atk = atk
 		b.points = points;
+	
 		var r =instance_create_layer(x,y,"Instances",obj_reflexfire)
 		r.direction = 180-dir;
 		r.image_angle = r.direction
-	
-	instance_destroy(self)	
+		instance_destroy(self)	
 }
 
 if(place_meeting(x,y+vspd,obj_energywall))
-{
-			
+{			
 		var dir = direction;
 		var b = instance_create_layer(x,y,"Instances",obj_reflex)
 		b.direction =  360-dir;	
@@ -39,11 +38,11 @@ if(place_meeting(x,y+vspd,obj_energywall))
 		b.image_index = 2;
 		b.atk = atk
 		b.points = points;
+
 		var r =instance_create_layer(x,y,"Instances",obj_reflexfire)
 		r.direction = 360-dir;
 		r.image_angle = r.direction
-	
-	instance_destroy(self)	
+		instance_destroy(self)	
 }
 x += hspd;
 y += vspd;

@@ -1,9 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(!place_meeting(x+hspd,y,obj_energywall)||!place_meeting(x,y+vspd,obj_energywall))
-{
-	
-}
+
 if(place_meeting(x+hspd,y,obj_energywall))
 {	
 	if(period <3)
@@ -26,7 +23,7 @@ if(place_meeting(x+hspd,y,obj_energywall))
 	}else{
 		scr_card_toUsed();//用过的放入弃牌
 		player.fired = false;	
-		scr_deck_draw();//抽卡自动填子弹		
+		scr_deck_draw();//抽卡自动填子弹	
 		instance_destroy(self)		
 	}	
 }
@@ -53,7 +50,6 @@ if(place_meeting(x,y+vspd,obj_energywall))
 		scr_card_toUsed();//用过的放入弃牌
 		player.fired = false;
 		scr_deck_draw();//抽卡自动填子弹
-
 		instance_destroy(self)				
 	}	
 }
@@ -62,7 +58,7 @@ if(place_meeting(x,y+vspd,obj_energywall))
 
 //var tail = instance_create_depth(x,y,-1001,obj_bullet_tail)
 //tail.image_angle = direction;
-if(place_meeting(x,y,player))
+if(place_meeting(x,y,player_receive))
 {	
 	/*if(atk>1)
 	{
@@ -71,8 +67,10 @@ if(place_meeting(x,y,player))
 	player.atk += player.echo_atk;*/
 	player.type = 3
 	player.fired = false;
-	obj_card_using.colors = 5;
-	obj_card_using.image_index = 5;
+	obj_card_using.sprite_index = spr_card_blue;
+	obj_card_using.colors = player.colors;
+	obj_card_using.points = player.points
+	obj_card_using.image_index = obj_card_using.colors;
 	obj_card_using.type = 3;
 	//player.energy += 1;
 	//if(player.energy >=4)
@@ -89,6 +87,6 @@ if(place_meeting(x,y,player))
 	instance_destroy(self)	
 }
 hspd = lengthdir_x(len,direction);
-	vspd = lengthdir_y(len,direction);
-	x += hspd;
-	y += vspd;
+vspd = lengthdir_y(len,direction);
+x += hspd;
+y += vspd;

@@ -17,16 +17,13 @@ var _cardIndeck = ds_list_find_value(global.card_list,index);//从牌组中出�
 var _colors = ds_map_find_value(_cardIndeck,"colors")//花色
 var _points = ds_map_find_value(_cardIndeck,"points")
 //表现层
-obj_card_vice.image_index = _colors;
 //赋予抽出卡牌属性
+obj_card_vice.image_index = _colors;
 obj_card_vice.colors = _colors;
 obj_card_vice.points = _points;
 scr_card_type_get(obj_card_vice)
-if(obj_card_vice.colors = 2)//初始化时检查是否有加攻击力buff
-{
-	player.ex_atk = 1;
-}
 ds_list_delete(global.card_list,index);//最后从原卡组中删除抽调的牌
+
+
 obj_cardManage.remain = ds_list_size(global.card_list);
-show_debug_message(111)
 //var card = instance_create_depth(xpos,room_height-23,-10001,obj_card_using);
