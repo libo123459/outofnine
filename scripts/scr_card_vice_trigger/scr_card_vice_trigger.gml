@@ -1,18 +1,22 @@
+player.ex_b_spd = 0;
+player.ex_d_cooldown = 0;
+player.ex_reflex_max = 0;
+player.ex_spd = 0;
 switch(obj_card_vice.colors)
 {
 	case 1:
-	scr_card_vice_heart()
+	player.ex_spd = 1
 	break;
 	
 	case 2:
-	scr_card_vice_cube()
+	player.ex_d_cooldown = room_speed/2;
 	break;
 	
 	case 3:
-	scr_card_vice_sheild()
+	player.ex_b_spd = 5;
 	break;
 	
 	case 4:
-	scr_card_vice_diamond()
+	player.ex_reflex_max = 2;
 	break;
 }

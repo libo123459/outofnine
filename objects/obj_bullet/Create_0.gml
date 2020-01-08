@@ -2,7 +2,7 @@
 // You can write your code in this editor
 //hspd = 0;
 //vspd = 0;
-spd = 10;
+spd = player.bullet_spd+player.ex_b_spd;
 len = spd;			
 //direction = spr_gun.direction;
 direction = player.fire_dir;
@@ -11,7 +11,6 @@ vspd = lengthdir_y(len,direction);
 xStart = x;
 yStart = y;
 image_angle = direction;
-echo = false;//加持状态
 
 atk = 1;
 colors = 0;

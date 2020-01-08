@@ -18,7 +18,8 @@
         "7167cdf3-ec69-40c4-b5f3-740c20feb6ff",
         "aa2dcc35-4757-47ef-87fe-bf2b417a93f5",
         "cde072bb-849c-4da5-a97f-e732efe5525b",
-        "fff3ffea-fb72-4f9f-a701-98fbb3035454"
+        "fff3ffea-fb72-4f9f-a701-98fbb3035454",
+        "bb61f540-8002-4c43-aecb-2a30ef4cc585"
     ],
     "filterType": "GMScript",
     "folderName": "deck",

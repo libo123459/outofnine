@@ -27,3 +27,4 @@ player.type = obj_card_using.type
 obj_card_using.image_index = obj_card_using.colors
 obj_card_vice.image_index = obj_card_vice.colors;
 
+scr_card_vice_trigger()

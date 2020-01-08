@@ -28,19 +28,29 @@ if(xaxis == 0 and yaxis == 0)
 } else {	
 	if(dash_key)
 	{
-		image_index = 0;
-		if(xaxis != 0)
-		{
-			image_xscale = -xaxis;
-		} else {
-			image_xscale = image_xscale;
-		}	
-			
-		alarm[0] = 0.3*room_speed;
-		alarm[3] = 0.7*room_speed;
-
-		sTime = true;
-		state = scr_dash_state;	
+		if(dash_cooldown = true)
+		{			
+			if(xaxis != 0)
+			{
+				image_xscale = -xaxis;
+			} else {
+				image_xscale = image_xscale;
+			}
+			if(sprite_index = spr_player_run_left)
+			{
+				sprite_index = spr_player_dash_left
+			}
+			if(sprite_index = spr_player_run_leftup)
+			{
+				sprite_index = spr_player_dash_leftup
+			}
+			alarm[0] = 0.3*room_speed;  //dash time
+			alarm[4] = 0.05*room_speed  //dash effect
+			alarm[5] = room_speed - ex_d_cooldown//dash cooldown
+			dash_cooldown = false;
+			sTime = true;
+			state = scr_dash_state;	
+		}
 		
 	} else {			
 		dir = point_direction(0,0,xaxis,yaxis);
@@ -58,19 +68,13 @@ if(xaxis == 0 and yaxis == 0)
 		}
 		if(flipped_ud = -1)
 		{
-			if(readyrun = false)
-			{
-				sprite_index = spr_player_readyrun;
-				len = spd*.91;
-				image_speed = 1*global.i_speed;
-			} else {
-				sprite_index = spr_player_run_left
-				len = spd*1.2;
-				image_speed = 1.3*global.i_speed;
-			}
+			sprite_index = spr_player_run_left
+			len = spd*1.2 + ex_spd;
+			image_speed = 1.3*global.i_speed;
+			
 		} else {			
 			sprite_index = spr_player_run_leftup
-			len = spd*1.2;
+			len = spd*1.2 + ex_spd;
 			image_speed = 1.3*global.i_speed;
 			
 		}

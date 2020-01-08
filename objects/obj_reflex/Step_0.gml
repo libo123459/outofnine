@@ -3,12 +3,12 @@
 
 if(place_meeting(x+hspd,y,obj_energywall))
 {	
-	if(period <3)
+	if(period <player.reflex_max+player.ex_reflex_max)
 	{			
-		while(!place_meeting(x+sign(hspd),y,obj_energywall))
+		/*while(!place_meeting(x+sign(hspd),y,obj_energywall))
 		{	
 			x += sign(hspd)
-		}
+		}*/
 		hspd = 0;
 		var dir = direction;	
 		//var b = instance_create_layer(x,y,"Instances",obj_reflex)
@@ -16,41 +16,40 @@ if(place_meeting(x+hspd,y,obj_energywall))
 		image_angle = direction
 		period = period+1
 		
-		var r =instance_create_layer(x,y,"Instances",obj_reflexfire)
+		var r =instance_create_layer(x+hspd,y,"Instances",obj_reflexfire)
 		r.direction = 180-dir;
 		r.image_angle = r.direction
 		//atk += 1;
 	}else{
-		scr_card_toUsed();//用过的放入弃牌
-		player.fired = false;	
-		scr_deck_draw();//抽卡自动填子弹	
-		instance_destroy(self)		
+		if(instance_number(obj_008_crystal) = 1)
+		{
+			scr_008_reborn()
+		}
+		scr_card_newround()
 	}	
 }
 
 if(place_meeting(x,y+vspd,obj_energywall))
 {
-	if(period<3)
+	if(period<player.reflex_max+player.ex_reflex_max)
 	{		
-		while(!place_meeting(x,y+sign(vspd),obj_energywall))
-		{
-			y+=sign(vspd)
-		}
+		
 		vspd = 0
 		var dir = direction;
 		//var b = instance_create_layer(x,y,"Instances",obj_reflex)
 		direction =  360-dir;	
 		image_angle = direction;
 		period = period+1
-		var r =instance_create_layer(x,y,"Instances",obj_reflexfire)
+		var r =instance_create_layer(x,y+vspd,"Instances",obj_reflexfire)
 		r.direction = 360-dir;
 		r.image_angle = r.direction
 		//atk += 1;
 	}else{
-		scr_card_toUsed();//用过的放入弃牌
-		player.fired = false;
-		scr_deck_draw();//抽卡自动填子弹
-		instance_destroy(self)				
+		if(instance_number(obj_008_crystal) = 1)
+		{
+			scr_008_reborn()
+		}
+		scr_card_newround()			
 	}	
 }
 //
@@ -58,32 +57,19 @@ if(place_meeting(x,y+vspd,obj_energywall))
 
 //var tail = instance_create_depth(x,y,-1001,obj_bullet_tail)
 //tail.image_angle = direction;
-if(place_meeting(x,y,player_receive))
-{	
-	/*if(atk>1)
+if(place_meeting(x,y,player))
+{
+	if(instance_number(obj_008_crystal) = 1)
 	{
-		player.echo_atk = atk-1;
+		scr_008_reborn()
 	}
-	player.atk += player.echo_atk;*/
 	player.type = 3
 	player.fired = false;
 	obj_card_using.sprite_index = spr_card_blue;
 	obj_card_using.colors = player.colors;
 	obj_card_using.points = player.points
 	obj_card_using.image_index = obj_card_using.colors;
-	obj_card_using.type = 3;
-	//player.energy += 1;
-	//if(player.energy >=4)
-	//{
-	//	player.energy = 4;
-	//}
-	/*
-	for(var i =0;i<ds_list_size(global.card_using_list);i+=1)
-	{
-		var _tmp = ds_list_find_value(global.card_using_list,i);
-		_tmp.colors = 5;
-		_tmp.image_index = 5;
-	}	*/
+	obj_card_using.type = 3;	
 	instance_destroy(self)	
 }
 hspd = lengthdir_x(len,direction);

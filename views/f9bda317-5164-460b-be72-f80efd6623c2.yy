@@ -8,7 +8,7 @@
         "107aa448-e16d-4fdb-b2c7-a4847248cf84"
     ],
     "filterType": "GMObject",
-    "folderName": "005",
+    "folderName": "005-Longarm",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

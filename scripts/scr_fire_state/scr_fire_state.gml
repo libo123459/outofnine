@@ -19,6 +19,7 @@ if(image_index>=3 && image_index <=4)
 		bullet.atk = atk+ex_atk;
 		bullet.image_index = type-1;
 		bullet.image_speed = 0;
+		//bullet.spd = bullet_spd+ex_b_spd;
 		
 		//alarm[0] = bullet_cooldown;//子弹间隔		
 	

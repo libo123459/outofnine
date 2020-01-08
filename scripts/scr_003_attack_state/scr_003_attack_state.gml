@@ -17,8 +17,8 @@ var dir = point_direction(x,y,targetX,targetY);
 
 hspeed_ = lengthdir_x(speed_,dir);
 vspeed_ = lengthdir_y(speed_,dir); 
-x += hspeed_*1.9*global.i_speed;;
-y += vspeed_*1.9*global.i_speed;;
+x += hspeed_*2.1*global.i_speed;;
+y += vspeed_*2.1*global.i_speed;;
 
 
 

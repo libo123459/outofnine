@@ -22,6 +22,7 @@ obj_card_vice.image_index = _colors;
 obj_card_vice.colors = _colors;
 obj_card_vice.points = _points;
 scr_card_type_get(obj_card_vice)
+scr_card_vice_trigger()
 ds_list_delete(global.card_list,index);//最后从原卡组中删除抽调的牌
 
 

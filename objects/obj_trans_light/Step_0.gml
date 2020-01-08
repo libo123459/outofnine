@@ -1,9 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
-instance_create_layer(x,y,"Instances",obj_bullet_tail)
-x += hspd;
-y += vspd;
-if(abs(x-targetX)<=2)
+if(start_dead = true)
+{
+	if(image_alpha<=0)
 {
 	instance_destroy(self)
+} else {
+	image_alpha -= 0.05;
+}
 }

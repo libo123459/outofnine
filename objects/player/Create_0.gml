@@ -6,15 +6,20 @@ kb_y = 0;
 
 //about move
 spd = 1.5;
+ex_spd = 0;
+bullet_spd = 10
+ex_b_spd = 0;
 hspd = 0;
 vspd = 0;
 len = 0;
 dir = 0;
-dash_time = room_speed/5;
+dash_cooldown = true
+ex_d_cooldown =0;
 flipped = -1;
 flipped_ud = -1;
 readyrun = false;
-
+reflex_max = 2
+ex_reflex_max = 0;
 //about bullet
 fire_dir = 0;
 fired = false;//发射子弹的冷却判定

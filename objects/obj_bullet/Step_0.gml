@@ -9,10 +9,10 @@ if(place_meeting(x+hspd,y,obj_energywall))
 	/*while(!place_meeting(x+sign(hspd),y,obj_energywall))
 	{	
 		x += sign(hspd)
-	}
-	hspd = 0;*/			
+	};*/	
+		hspd = 0		
 		var dir = direction;
-		var b = instance_create_layer(x,y,"Instances",obj_reflex)
+		var b = instance_create_layer(x+hspd,y,"Instances",obj_reflex)
 		b.direction = 180-dir;
 		b.image_angle = b.direction
 		b.period = 0;
@@ -29,8 +29,9 @@ if(place_meeting(x+hspd,y,obj_energywall))
 
 if(place_meeting(x,y+vspd,obj_energywall))
 {			
+		vspd = 0
 		var dir = direction;
-		var b = instance_create_layer(x,y,"Instances",obj_reflex)
+		var b = instance_create_layer(x,y+vspd,"Instances",obj_reflex)
 		b.direction =  360-dir;	
 		b.image_angle = b.direction
 		b.period = 0;
