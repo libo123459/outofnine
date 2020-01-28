@@ -4,10 +4,10 @@
     "mvc": "1.1",
     "name": "5ba6475c-2152-4305-9b1c-68d554474ee3",
     "children": [
-        "e7937d0a-856b-4761-b3b9-cdee368406d6"
+        "3849225f-120e-4852-a10e-2eba9a64628d"
     ],
     "filterType": "GMObject",
-    "folderName": "things",
+    "folderName": "trap",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

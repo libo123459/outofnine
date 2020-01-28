@@ -27,5 +27,5 @@ if(sprite_index = asset_get_index("spr_002_appear_"+string(colors)))
 {
 	state = scr_002_idle_state;
 	
-	alarm[3] = room_speed
+	alarm[3] = room_speed/3
 }

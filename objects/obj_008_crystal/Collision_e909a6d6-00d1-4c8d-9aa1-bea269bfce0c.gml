@@ -8,14 +8,6 @@ if(other.type = type || other.type = 3)
 	instance_create_layer(0,0,"Instances",obj_shake)		
 }
 
-
-
-
-
-
-
-
-
 /*
 if(other.reflex = false)
 {

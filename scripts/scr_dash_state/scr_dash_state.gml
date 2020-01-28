@@ -7,7 +7,7 @@ if(sprite_index = spr_player_run_leftup)
 {
 	sprite_index = spr_player_dash_leftup
 }
-len = spd * 3;
+len = spd * 3.2;
 hspd = lengthdir_x(len,dir);
 vspd = lengthdir_y(len,dir);
 if(place_meeting(x + hspd,y,obj_wall))

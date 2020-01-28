@@ -18,12 +18,13 @@ ex_d_cooldown =0;
 flipped = -1;
 flipped_ud = -1;
 readyrun = false;
-reflex_max = 2
+reflex_max = 1
 ex_reflex_max = 0;
 //about bullet
 fire_dir = 0;
 fired = false;//发射子弹的冷却判定
 sTime = false;
+hurted = false;
 
 //属性
 atk = 1;
@@ -35,7 +36,10 @@ colors = 0;
 sheild = 0
 hp = 99;
 gold = 0;
-
+color_heart = 0
+color_cube = 0;
+color_sheild = 0;
+color_diamond = 0;
 //other
 interact = false;
 target_select = noone;

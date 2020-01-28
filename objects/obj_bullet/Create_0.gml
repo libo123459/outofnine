@@ -6,8 +6,7 @@ spd = player.bullet_spd+player.ex_b_spd;
 len = spd;			
 //direction = spr_gun.direction;
 direction = player.fire_dir;
-hspd = lengthdir_x(len,direction);
-vspd = lengthdir_y(len,direction);
+
 xStart = x;
 yStart = y;
 image_angle = direction;

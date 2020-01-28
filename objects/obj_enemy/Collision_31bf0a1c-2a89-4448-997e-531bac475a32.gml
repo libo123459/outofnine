@@ -21,12 +21,11 @@ if(other.type = type || other.type = 3)
 	}	
 	knockback = true;
 	alarm[2] = 10
-	instance_create_layer(0,0,"Instances",obj_shake)	
+	instance_create_layer(0,0,"Instances",obj_shake)
+	
 }
 
-scr_card_toUsed();//用过的放入弃牌
-player.fired = false;
-scr_deck_draw();//抽卡自动填子弹
+scr_card_newround()
 instance_destroy(other);
 
 /*

@@ -4,7 +4,7 @@ if(state = scr_003_attack_state)
 {
 	randomize();
 	state = scr_003_stall_state;
-	alarm[1] = room_speed
+	alarm[1] = room_speed/2
 	attacked = false;
 }
 if(state = scr_003_readyattack_state)

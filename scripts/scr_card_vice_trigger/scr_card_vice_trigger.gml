@@ -13,10 +13,10 @@ switch(obj_card_vice.colors)
 	break;
 	
 	case 3:
-	player.ex_b_spd = 5;
+	player.ex_b_spd = 8;
 	break;
 	
 	case 4:
-	player.ex_reflex_max = 2;
+	player.ex_reflex_max = 1;
 	break;
 }

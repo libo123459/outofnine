@@ -25,7 +25,9 @@ if(place_meeting(x+hspd,y,obj_energywall))
 		{
 			scr_008_reborn()
 		}
+		scr_004_state_refreash()
 		scr_card_newround()
+		instance_destroy(self)	
 	}	
 }
 
@@ -33,7 +35,6 @@ if(place_meeting(x,y+vspd,obj_energywall))
 {
 	if(period<player.reflex_max+player.ex_reflex_max)
 	{		
-		
 		vspd = 0
 		var dir = direction;
 		//var b = instance_create_layer(x,y,"Instances",obj_reflex)
@@ -49,20 +50,58 @@ if(place_meeting(x,y+vspd,obj_energywall))
 		{
 			scr_008_reborn()
 		}
-		scr_card_newround()			
+		scr_004_state_refreash()
+		scr_card_newround()	
+		instance_destroy(self)	
 	}	
 }
+
+if(place_meeting(x,y+vspd,obj_004_reboundBoard))
+{	
+	vspd = 0;
+	var dir = direction;
+	direction =  360-dir;
+	image_angle = direction
+	var rb = instance_nearest(x,y+vspd,obj_004_reboundBoard)
+	instance_destroy(rb)
+		/*if(rb.sprite_index != asset_get_index("spr_004_static_"+string(rb.colors)))
+		{
+			obj_enemyManage.special_dead += 1;	
+			rb.state = scr_004_static_state;
+		}*/
+	show_debug_message(obj_enemyManage.special_dead)
+	
+}
+
+if(place_meeting(x+hspd,y,obj_004_reboundBoard))
+{	
+	hspd = 0;
+	var dir = direction;
+	direction =  180-dir;
+	image_angle = direction
+	var rb = instance_nearest(x+hspd,y,obj_004_reboundBoard)	
+	instance_destroy(rb)
+		/*if(rb.sprite_index != asset_get_index("spr_004_static_"+string(rb.colors)))
+		{
+			obj_enemyManage.special_dead += 1;	
+			rb.state = scr_004_static_state;
+		}*/
+	show_debug_message(obj_enemyManage.special_dead)
+	
+}
+
 //
 //image_angle = direction;
 
 //var tail = instance_create_depth(x,y,-1001,obj_bullet_tail)
 //tail.image_angle = direction;
-if(place_meeting(x,y,player))
+if(place_meeting(x,y,player_receive))
 {
 	if(instance_number(obj_008_crystal) = 1)
 	{
 		scr_008_reborn()
 	}
+	scr_004_state_refreash()
 	player.type = 3
 	player.fired = false;
 	obj_card_using.sprite_index = spr_card_blue;

@@ -10,6 +10,9 @@ if(sprite_index = spr_player_readyrun)
 }
 if(state = scr_fire_state)
 {
-	//fired = false;
+	if(!instance_exists(obj_bullet_p))
+	{		
+		fired = false;
+	}
 	state = scr_move_state;
 }

@@ -68,16 +68,13 @@ if(xaxis == 0 and yaxis == 0)
 		}
 		if(flipped_ud = -1)
 		{
-			sprite_index = spr_player_run_left
-			len = spd*1.2 + ex_spd;
-			image_speed = 1.3*global.i_speed;
-			
+			sprite_index = spr_player_run_left			
 		} else {			
-			sprite_index = spr_player_run_leftup
-			len = spd*1.2 + ex_spd;
-			image_speed = 1.3*global.i_speed;
-			
+			sprite_index = spr_player_run_leftup			
 		}
+		
+		len = spd*1.2 + ex_spd;
+		image_speed = 1*global.i_speed;
 		image_xscale = flipped;			
 	}	
 }

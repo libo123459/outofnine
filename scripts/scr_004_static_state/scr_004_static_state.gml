@@ -1,0 +1,1 @@
+sprite_index = asset_get_index("spr_004_static_"+string(colors));

@@ -3,10 +3,8 @@ image_speed = .3
 if(place_meeting(x,y,player))
 {
 	if(attacked = true)
-	{		
-		{			
-			scr_player_hurt(self)
-		}	
-		attacked = false;
+	{					
+		scr_player_hurt(self)			
+		attacked = false;	
 	}	
 }

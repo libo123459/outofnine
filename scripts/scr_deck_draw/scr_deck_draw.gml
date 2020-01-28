@@ -9,8 +9,7 @@ var _points = ds_map_find_value(_cardIndeck,"points")
 	//var card = instance_create_depth(50,room_height-30,-10001,obj_card_using);
 	//card.sprite_index = spr_card;
 
-	//赋予抽出卡牌属性
-	
+//赋予抽出卡牌属性	
 obj_card_using.image_index = _colors;
 obj_card_using.colors = _colors;
 obj_card_using.points = _points;
@@ -21,6 +20,7 @@ if(obj_card_using.type = 3)
 }else{
 	obj_card_using.sprite_index = spr_card
 }
+
 player.points = _points;
 player.colors = _colors;
 player.type = obj_card_using.type	

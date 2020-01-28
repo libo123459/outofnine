@@ -1,9 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if(instance_number(obj_enemy) == 0 && instance_number(obj_008_crystal)=0)
-{	
-	///sprite_index = spr_thedoor_open;
+if(instance_number(obj_enemy) == 0 && instance_number(obj_gear)=0)
+{	///sprite_index = spr_thedoor_open;
+	
 	image_index = 1;
-	isopen = true;
+	isopen = true;	
 }
